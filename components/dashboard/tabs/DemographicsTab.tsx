@@ -50,10 +50,10 @@ export default function DemographicsTab() {
                 <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#626C71' }} />
                 <Bar dataKey="upf" name="Avg. UPF Ratio %" radius={[4, 4, 0, 0]}>
                   {dietByRoleData.map((d, i) => (
-                    <Cell key={i} fill={d.upf > 40 ? '#FF5459' : d.upf > 35 ? '#E68161' : '#32B8C6'} />
+                    <Cell key={i} fill={d.upf > 40 ? '#757575' : d.upf > 35 ? '#BFBFBF' : '#353A3E'} />
                   ))}
                 </Bar>
-                <Bar dataKey="lifeScore" name="Avg. Life Score™" fill="#21808D" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="lifeScore" name="Avg. Life Score™" fill="#301934" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -80,7 +80,7 @@ export default function DemographicsTab() {
                 />
                 <Bar dataKey="value" name="Participation %" radius={[6, 6, 0, 0]}>
                   {participationData.map((d, i) => (
-                    <Cell key={i} fill={d.value > 70 ? '#32B8C6' : d.value >= 50 ? '#21808D' : '#E68161'} />
+                    <Cell key={i} fill={d.value > 70 ? '#353A3E' : d.value >= 50 ? '#9E2C6A' : '#757575'} />
                   ))}
                 </Bar>
               </BarChart>

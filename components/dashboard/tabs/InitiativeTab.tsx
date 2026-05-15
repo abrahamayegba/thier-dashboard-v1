@@ -39,11 +39,11 @@ export default function InitiativeTab() {
               <ReferenceLine
                 yAxisId="left"
                 x="Jul"
-                stroke="rgba(50,184,198,0.3)"
+                stroke="rgba(158,44,106,0.4)"
                 strokeDasharray="4 2"
-                label={{ value: 'Q3 Challenge', position: 'top', fontSize: 10, fill: '#32B8C6' }}
+                label={{ value: 'Q3 Challenge', position: 'top', fontSize: 10, fill: '#9E2C6A' }}
               />
-              <ReferenceLine yAxisId="left" x="Sep" stroke="rgba(50,184,198,0.3)" strokeDasharray="4 2" />
+              <ReferenceLine yAxisId="left" x="Sep" stroke="rgba(158,44,106,0.4)" strokeDasharray="4 2" />
               <XAxis dataKey="month" tick={axisStyle} axisLine={false} tickLine={false} />
               <YAxis
                 yAxisId="left"
@@ -78,9 +78,9 @@ export default function InitiativeTab() {
                 type="monotone"
                 dataKey="upf"
                 name="UPF %"
-                stroke="#FF5459"
+                stroke="#800080"
                 strokeWidth={2}
-                dot={{ r: 3, fill: '#FF5459' }}
+                dot={{ r: 3, fill: '#800080' }}
                 activeDot={{ r: 5 }}
               />
               <Line
@@ -88,9 +88,9 @@ export default function InitiativeTab() {
                 type="monotone"
                 dataKey="lifeScore"
                 name="Life Score™"
-                stroke="#32B8C6"
+                stroke="#301934"
                 strokeWidth={2}
-                dot={{ r: 3, fill: '#32B8C6' }}
+                dot={{ r: 3, fill: '#301934' }}
                 activeDot={{ r: 5 }}
               />
             </LineChart>
@@ -103,7 +103,7 @@ export default function InitiativeTab() {
         {baseData.initiatives.map((initiative) => (
           <div key={initiative.title} className="bg-card rounded-xl border border-border p-4 flex flex-col gap-3">
             <div className="flex items-start gap-2">
-              <span className="mt-0.5 w-2 h-2 rounded-full bg-[#32B8C6] shrink-0" />
+              <span className="mt-0.5 w-2 h-2 rounded-full bg-[#9E2C6A] shrink-0" />
               <h4 className="text-sm font-semibold text-foreground leading-snug text-balance">
                 {initiative.title}
               </h4>
@@ -118,7 +118,7 @@ export default function InitiativeTab() {
               ].map(({ label, value, positive }) => (
                 <div key={label} className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{label}</span>
-                  <span className={cn('text-xs font-semibold', positive ? 'text-[#32B8C6]' : 'text-foreground')}>
+                  <span className={cn('text-xs font-semibold', positive ? 'text-[#9E2C6A]' : 'text-foreground')}>
                     {value}
                   </span>
                 </div>

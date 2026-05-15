@@ -81,7 +81,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         {/* Logo + toggle */}
         <div className="flex items-center justify-between px-4 py-4 border-b border-white/8">
           {!collapsed && (
-            <span className="text-lg font-bold tracking-widest text-[#32B8C6] uppercase select-none">
+            <span className="text-lg font-bold tracking-widest text-[#9E2C6A] uppercase select-none">
               THIER
             </span>
           )}
@@ -111,14 +111,14 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium transition-all duration-150 w-full text-left relative group',
                   isActive
-                    ? 'bg-[rgba(50,184,198,0.15)] text-[#32B8C6]'
+                    ? 'bg-[rgba(158,44,106,0.15)] text-[#9E2C6A]'
                     : 'text-white/60 hover:text-white hover:bg-white/8',
                   collapsed && 'justify-center px-2'
                 )}
               >
                 <Icon
                   size={18}
-                  className={cn('shrink-0', isActive ? 'text-[#32B8C6]' : 'text-white/50 group-hover:text-white')}
+                  className={cn('shrink-0', isActive ? 'text-[#9E2C6A]' : 'text-white/50 group-hover:text-white')}
                 />
                 {!collapsed && (
                   <span className="truncate leading-none">{item.label}</span>
@@ -127,13 +127,13 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
                   <span className="ml-auto w-2 h-2 rounded-full bg-[#C0152F] shrink-0" aria-label="New notification" />
                 )}
                 {!collapsed && item.badge === 'new' && (
-                  <span className="ml-auto text-[10px] font-semibold bg-[#32B8C6] text-[#13343B] px-1.5 py-0.5 rounded-full leading-none">
+                  <span className="ml-auto text-[10px] font-semibold bg-[#9E2C6A] text-white px-1.5 py-0.5 rounded-full leading-none">
                     NEW
                   </span>
                 )}
                 {/* Active indicator bar */}
                 {isActive && (
-                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-[#32B8C6] rounded-r-full" />
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-[#9E2C6A] rounded-r-full" />
                 )}
               </button>
             )
@@ -168,7 +168,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
             <img
               src="https://i.pravatar.cc/40?img=5"
               alt="Amanda King"
-              className="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-[#32B8C6]/40"
+              className="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-[#9E2C6A]/40"
             />
             {!collapsed && (
               <div className="overflow-hidden">

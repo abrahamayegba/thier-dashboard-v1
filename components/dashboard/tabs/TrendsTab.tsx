@@ -86,8 +86,8 @@ export default function TrendsTab() {
                 />
                 <Tooltip contentStyle={tooltipStyle.contentStyle} labelStyle={tooltipStyle.labelStyle} />
                 <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#626C71' }} />
-                <Line yAxisId="left" type="monotone" dataKey="lifeScore" name="Life Score™" stroke="#32B8C6" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
-                <Line yAxisId="right" type="monotone" dataKey="engagement" name="Engagement %" stroke="#21808D" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
+                <Line yAxisId="left" type="monotone" dataKey="lifeScore" name="Life Score™" stroke="#301934" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
+                <Line yAxisId="right" type="monotone" dataKey="engagement" name="Engagement %" stroke="#800080" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -102,9 +102,9 @@ export default function TrendsTab() {
                 <YAxis tick={axisStyle} axisLine={false} tickLine={false} width={32} />
                 <Tooltip contentStyle={tooltipStyle.contentStyle} labelStyle={tooltipStyle.labelStyle} formatter={(v: number) => [`${v}%`]} />
                 <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#626C71' }} />
-                <Area type="monotone" dataKey="carbs" name="Carbohydrates %" stroke="#32B8C6" fill="rgba(50,184,198,0.12)" strokeWidth={2} />
-                <Area type="monotone" dataKey="fat" name="Fat %" stroke="#E68161" fill="rgba(230,129,97,0.12)" strokeWidth={2} />
-                <Area type="monotone" dataKey="protein" name="Protein %" stroke="#21808D" fill="rgba(33,128,141,0.12)" strokeWidth={2} />
+                <Area type="monotone" dataKey="carbs" name="Carbohydrates %" stroke="#301934" fill="rgba(48,25,52,0.12)" strokeWidth={2} />
+                <Area type="monotone" dataKey="fat" name="Fat %" stroke="#800080" fill="rgba(128,0,128,0.12)" strokeWidth={2} />
+                <Area type="monotone" dataKey="protein" name="Protein %" stroke="#9E2C6A" fill="rgba(158,44,106,0.12)" strokeWidth={2} />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -123,12 +123,12 @@ export default function TrendsTab() {
                 <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#626C71' }} />
                 <Bar dataKey="sugar" name="Avg. Added Sugar (g)" radius={[4, 4, 0, 0]}>
                   {seasonalData.map((d, i) => (
-                    <Cell key={i} fill={d.sugar > 50 ? '#FF5459' : d.sugar > 42 ? '#E68161' : '#32B8C6'} />
+                    <Cell key={i} fill={d.sugar > 50 ? '#757575' : d.sugar > 42 ? '#BFBFBF' : '#353A3E'} />
                   ))}
                 </Bar>
                 <Bar dataKey="upf" name="UPF Ratio %" radius={[4, 4, 0, 0]}>
                   {seasonalData.map((d, i) => (
-                    <Cell key={i} fill={d.upf > 40 ? '#E68161' : d.upf > 36 ? '#21808D' : '#32B8C6'} />
+                    <Cell key={i} fill={d.upf > 40 ? '#757575' : d.upf > 36 ? '#BFBFBF' : '#353A3E'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -157,7 +157,7 @@ export default function TrendsTab() {
                 />
                 <Bar dataKey="growth" name="YoY Growth %" radius={[6, 6, 0, 0]}>
                   {yoyData.map((_, i) => (
-                    <Cell key={i} fill={['#32B8C6', '#21808D', '#1D7480', '#777C7C'][i]} />
+                    <Cell key={i} fill={['#301934', '#9E2C6A', '#800080', '#353A3E'][i]} />
                   ))}
                 </Bar>
               </BarChart>

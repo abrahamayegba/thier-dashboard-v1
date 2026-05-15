@@ -10,11 +10,11 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 const cohortMonths = Array.from({ length: 12 }, (_, i) => `M${i + 1}`)
 
 const legend = [
-  { label: '85–100% Good', color: '#21808D' },
-  { label: '70–84%', color: '#32B8C6' },
-  { label: '55–69% Warning', color: '#E6A855' },
-  { label: '40–54%', color: '#E68161' },
-  { label: 'Below 40% Danger', color: '#C0152F' },
+  { label: '85–100% Good', color: '#353A3E' },
+  { label: '70–84%', color: '#9E2C6A' },
+  { label: '55–69% Warning', color: '#BFBFBF' },
+  { label: '40–54%', color: '#757575' },
+  { label: 'Below 40% Danger', color: '#1A1A1A' },
 ]
 
 export default function CohortTab() {
@@ -34,7 +34,7 @@ export default function CohortTab() {
             className={cn(
               'px-4 py-1.5 rounded-md text-xs font-medium transition-all',
               subTab === tab.id
-                ? 'bg-[#32B8C6] text-[#1F2121] shadow-sm font-semibold'
+                ? 'bg-[#9E2C6A] text-white shadow-sm font-semibold'
                 : 'text-white/40 hover:text-white/70'
             )}
           >

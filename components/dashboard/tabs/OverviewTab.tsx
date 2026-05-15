@@ -11,8 +11,9 @@ interface OverviewTabProps {
   funnel: { eligible: number; registered: number; first_meal_logged: number; sustained_engagement: number }
 }
 
-const TEAL_PALETTE = ['#21808D', '#32B8C6', '#1D7480', '#1A6873', '#4DB6BF', '#85D4DA']
-const PIE_COLORS = ['#32B8C6', '#21808D', '#1D7480', '#777C7C', '#A7A9A9', '#626C71']
+// THIER colour scheme
+const FUNNEL_PALETTE = ['#301934', '#9E2C6A', '#800080', '#353A3E', '#757575', '#BFBFBF']
+const PIE_COLORS = ['#301934', '#9E2C6A', '#800080', '#1A1A1A', '#353A3E', '#757575']
 
 const funnelSteps = (funnel: OverviewTabProps['funnel']) => [
   { label: 'Eligible', value: funnel.eligible },
@@ -71,7 +72,7 @@ export default function OverviewTab({ funnel }: OverviewTabProps) {
                 />
                 <Bar dataKey="value" radius={[0, 6, 6, 0]}>
                   {funnelData.map((_, i) => (
-                    <Cell key={i} fill={TEAL_PALETTE[i]} />
+                    <Cell key={i} fill={FUNNEL_PALETTE[i]} />
                   ))}
                 </Bar>
               </BarChart>
@@ -122,9 +123,9 @@ export default function OverviewTab({ funnel }: OverviewTabProps) {
               <YAxis tick={axisStyle} axisLine={false} tickLine={false} width={32} />
               <Tooltip contentStyle={tooltipStyle.contentStyle} labelStyle={tooltipStyle.labelStyle} />
               <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#626C71' }} />
-              <Line type="monotone" dataKey="upf" name="UPF %" stroke="#FF5459" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
-              <Line type="monotone" dataKey="sugar" name="Added Sugar (g)" stroke="#E68161" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
-              <Line type="monotone" dataKey="fiber" name="Fiber (g)" stroke="#32B8C6" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
+              <Line type="monotone" dataKey="upf" name="UPF %" stroke="#301934" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
+              <Line type="monotone" dataKey="sugar" name="Added Sugar (g)" stroke="#800080" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
+              <Line type="monotone" dataKey="fiber" name="Fiber (g)" stroke="#9E2C6A" strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -158,7 +159,7 @@ export default function OverviewTab({ funnel }: OverviewTabProps) {
                 />
                 <Bar dataKey="score" radius={[0, 6, 6, 0]}>
                   {baseData.departmentPerformance.slice(0, 5).map((d, i) => (
-                    <Cell key={i} fill={d.score > 90 ? '#32B8C6' : d.score > 80 ? '#21808D' : '#1D7480'} />
+                    <Cell key={i} fill={d.score > 90 ? '#301934' : d.score > 80 ? '#9E2C6A' : '#800080'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -192,7 +193,7 @@ export default function OverviewTab({ funnel }: OverviewTabProps) {
                 />
                 <Bar dataKey="upf" radius={[0, 6, 6, 0]}>
                   {baseData.officePerformance.map((d, i) => (
-                    <Cell key={i} fill={d.upf < 34 ? '#32B8C6' : d.upf < 38 ? '#21808D' : '#E68161'} />
+                    <Cell key={i} fill={d.upf < 34 ? '#353A3E' : d.upf < 38 ? '#757575' : '#BFBFBF'} />
                   ))}
                 </Bar>
               </BarChart>

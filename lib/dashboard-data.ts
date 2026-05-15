@@ -189,9 +189,9 @@ export function getKpiThreshold(value: number, type: string): 'good' | 'warning'
 }
 
 export function getRetentionColor(value: number): string {
-  if (value >= 85) return '#21808D'
-  if (value >= 70) return '#32B8C6'
-  if (value >= 55) return '#E6A855'
-  if (value >= 40) return '#E68161'
-  return '#C0152F'
+  if (value >= 85) return '#353A3E'   // Good
+  if (value >= 70) return '#9E2C6A'   // Highlight
+  if (value >= 55) return '#BFBFBF'   // Warning
+  if (value >= 40) return '#757575'   // Danger
+  return '#1A1A1A'                    // Critical
 }

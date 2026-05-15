@@ -55,16 +55,16 @@ const kpiDefs = [
 
 const thresholdStyles = {
   good: {
-    badge: 'bg-[rgba(50,184,198,0.15)] text-[#32B8C6]',
-    dot: 'bg-[#32B8C6]',
+    badge: 'bg-[rgba(53,58,62,0.15)] text-[#353A3E]',
+    dot: 'bg-[#353A3E]',
   },
   warning: {
-    badge: 'bg-[rgba(230,129,97,0.15)] text-[#E68161]',
-    dot: 'bg-[#E68161]',
+    badge: 'bg-[rgba(191,191,191,0.2)] text-[#757575]',
+    dot: 'bg-[#BFBFBF]',
   },
   danger: {
-    badge: 'bg-[rgba(255,84,89,0.15)] text-[#FF5459]',
-    dot: 'bg-[#FF5459]',
+    badge: 'bg-[rgba(117,117,117,0.15)] text-[#757575]',
+    dot: 'bg-[#757575]',
   },
 }
 
@@ -86,7 +86,7 @@ export default function KpiCards({ data }: KpiCardsProps) {
         return (
           <div
             key={kpi.key}
-            className="bg-card rounded-xl border border-border p-4 flex flex-col gap-3 hover:border-[rgba(50,184,198,0.3)] transition-colors"
+            className="bg-card rounded-xl border border-border p-4 flex flex-col gap-3 hover:border-[rgba(158,44,106,0.4)] transition-colors"
           >
             <div className="flex items-start justify-between gap-2">
               <p className="text-xs font-medium text-muted-foreground leading-tight text-balance">
@@ -111,7 +111,7 @@ export default function KpiCards({ data }: KpiCardsProps) {
             <div
               className={cn(
                 'flex items-center gap-1 text-[11px] font-medium',
-                isPositiveTrend ? 'text-[#32B8C6]' : 'text-[#FF5459]'
+                isPositiveTrend ? 'text-[#301934]' : 'text-[#757575]'
               )}
             >
               {kpi.trend.direction === 'up' ? (
