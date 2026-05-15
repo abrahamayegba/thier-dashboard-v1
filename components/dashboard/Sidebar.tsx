@@ -81,7 +81,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         {/* Logo + toggle */}
         <div className="flex items-center justify-between px-4 py-4 border-b border-white/8">
           {!collapsed && (
-            <span className="text-lg font-bold tracking-widest text-[#9E2C6A] uppercase select-none">
+            <span className="text-lg font-bold tracking-widest text-white uppercase select-none">
               THIER
             </span>
           )}
